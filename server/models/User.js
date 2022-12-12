@@ -8,6 +8,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
+      trim: true
     },
     email: {
       type: String,
@@ -18,9 +19,11 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: true,
+      minlength: true
     },
     // set savedWorlds to an empty array for now
-    savedWorlds: [],
+    // savedWorlds: [],
+
   },
   // set this to use virtual below
   {
