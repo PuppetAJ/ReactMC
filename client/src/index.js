@@ -3,7 +3,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
-// import reportWebVitals from "./reportWebVitals";
+import { initdb } from "./database";
+
+// window.addEventListener("load", function () {
+// 	initdb();
+// });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
 	Stats,
@@ -10,7 +10,6 @@ import {
 	Loader,
 	Preload,
 	BakeShadows,
-	PerformanceMonitor,
 } from "@react-three/drei";
 import { Physics } from "@react-three/rapier";
 import { Cube, Cubes } from "../Components/Cube";
@@ -18,9 +17,8 @@ import { Ground } from "../Components/Ground";
 import { Player } from "../Components/Player";
 import { Ground2 } from "../Components/Ground2";
 
+softShadows();
 export default function Editor() {
-	softShadows();
-
 	const [dpr, setDpr] = useState(1.5);
 	return (
 		<KeyboardControls
@@ -32,16 +30,13 @@ export default function Editor() {
 				{ name: "jump", keys: ["Space"] },
 			]}
 		>
-			{/* <Suspense> */}
-			<Canvas shadows camera={{ fov: 45 }}>
-				{/* <PerformanceMonitor
-					onIncline={() => setDpr(2)}
-					onDecline={() => setDpr(1)}
-				> */}
+			<Canvas shadows dpr={(1, 2)} camera={{ fov: 45 }}>
+				<color attach='background' args={["#202020"]} />
+				<fog attach='fog' args={["#202020", 5, 45]} />
 				<Preload all />
 				<BakeShadows />
 				<Sky
-					elevation={0.6}
+					elevation={0.16}
 					rayleigh={1.558}
 					azimuth={14.7}
 					exposure={0.4349}
@@ -58,20 +53,18 @@ export default function Editor() {
 						speed={1}
 					/> */}
 
-				<ambientLight intensity={0.3} />
+				<ambientLight intensity={0.7} />
 				<pointLight castShadow intensity={0.8} position={[100, 100, 100]} />
 				<Physics gravity={[0, -30, 0]}>
 					<Ground />
 					<Ground2 />
 					<Player />
-					<Cube position={[0, 0.5, -10]} />
+					{/* <Cube position={[0, 0.5, -10]} /> */}
 					<Cubes />
 				</Physics>
 				<PointerLockControls />
-				{/* </PerformanceMonitor> */}
 				<Stats />
 			</Canvas>
-			{/* </Suspense> */}
 			<Loader initialState={(active) => active} />
 		</KeyboardControls>
 	);

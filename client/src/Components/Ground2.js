@@ -67,7 +67,6 @@ export function Ground2(props) {
 	return (
 		<Instances limit={1000000}>
 			<boxGeometry />
-			{/* <meshStandardMaterial/> */}
 			{[...Array(6)].map((_, index) => (
 				<meshStandardMaterial
 					attach={`material-${index}`}
