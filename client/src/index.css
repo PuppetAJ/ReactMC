@@ -41,7 +41,7 @@ body,
   display: flex;
   flex-direction: column;
   justify-items: stretch;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
 canvas {
@@ -52,14 +52,14 @@ canvas {
 /* Main Container Styling */
 .container {
   width: auto;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .h1,
-.h2, 
+.h2,
 .h3,
 .h4 {
   font-family: Minecraft, Avenir, Helvetica, Arial, sans-serif;
@@ -132,4 +132,3 @@ canvas {
 #logo:hover {
   content: url(./assets/Campfire.webp)
 }
-
