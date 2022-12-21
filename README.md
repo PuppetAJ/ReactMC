@@ -1,14 +1,11 @@
 
 <h2 align="center">
   CHUNK'D<br/>
-  <a href="https://github.com/PuppetAJ/ReactMC" target="_blank">CHUNK'D</a>
+  <a href="https://chunkd-aj.herokuapp.com/" target="_blank">CHUNK'D</a>
 </h2>
 
 <center>
 
-[![forthebadge](https://forthebadge.com/generator/?pbg=%23E46C17&plabel=BUILT+WITH&slabel=MongoDB&sbg=%23D35B09)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/generator/?pbg=%23EA4560&sbg=%23C13B3A&plabel=Express.JS&slabel=REACT)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/generator/?pbg=%23EA4560&sbg=%23C13B3A&plabel=Node.JS&slabel=THREE.JS)](https://forthebadge.com) &nbsp;
 
 
 
@@ -45,9 +42,10 @@ The page will reload when you make changes.
 
 ## Usage
 
-![image]()
+![Screenshot 2022-12-21 at 16-10-29 React App](https://user-images.githubusercontent.com/107944830/209021374-a7c86ca8-af0c-40c7-9f62-bb97a6a38748.png)
 
-You may also view the project [HERE]()
+
+You may also view the project [HERE](https://chunkd-aj.herokuapp.com/)
 
 As a new user, you need to sign up to create an account to log in. Once logged in, you may view posts with builds shared by other users, comment on those posts, and add the other users as friends. You may also enter the editor where you can view the controls needed to create your own build by placing and destroying blocks. Once in the editor, you can save a 3-D rendering of your build that you can then add to your own posts to share for other users to view and comment on. 
 
